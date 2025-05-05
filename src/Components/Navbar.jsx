@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { NavLink } from "react-router";
+import { Link, NavLink } from "react-router";
 import { Menu, X } from "lucide-react";
 
 // Dummy user (null = not logged in)
@@ -44,7 +44,7 @@ const Navbar=()=> {
             </NavLink>
           ))}
 
-          {user ? (
+          {/* {user ? (
             <div className="flex items-center gap-3">
               <div className="relative group">
                 <img
@@ -59,10 +59,13 @@ const Navbar=()=> {
               <button className="text-sm text-red-500 hover:underline">Logout</button>
             </div>
           ) : (
-            <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 text-sm">
+            <Link to="/auth/login" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 text-sm">
               Login
-            </button>
-          )}
+            </Link>
+          )} */}
+           <Link to="/auth/login" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 text-sm">
+              Login
+            </Link>
         </div>
 
         {/* Mobile Menu Button */}
