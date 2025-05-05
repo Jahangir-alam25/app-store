@@ -1,10 +1,10 @@
 import React from 'react';
+import AppSlider from './AppSlider';
 
 const Home = () => {
     return (
         <div>
-            <h1>Home</h1>
-            <p>Home page</p>
+          <AppSlider></AppSlider>
         </div>
     );
 };
