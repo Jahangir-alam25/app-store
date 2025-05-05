@@ -4,6 +4,7 @@ import Home from "../Pages/Home";
 import AuthLayout from "../Layout/AuthLayout";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
+import AppDetails from "../Pages/AppDetails";
 
 
 const router = createBrowserRouter([
@@ -14,7 +15,13 @@ const router = createBrowserRouter([
         {
           path: "/",
           element: <Home></Home>,
+          loader: () => fetch("/apps.json"),
         },
+        {
+          path: "/category/:id",
+         Component: AppDetails,
+          loader: () => fetch("/apps.json"),
+        }
       ],
     },
     {
