@@ -1,13 +1,18 @@
-import React from 'react';
+import React, { use } from 'react';
 import { FcGoogle } from 'react-icons/fc';
-import { Link } from 'react-router';
+import { Link, useNavigate } from 'react-router';
+import { AuthContext } from '../Provider/AuthProvider';
+import { GoogleAuthProvider } from 'firebase/auth';
 
 
 
 
 
 const Register = () => {
+const { createUser, setUser, updateUser,signInWithGoogle } = use(AuthContext);
 
+    const provider = new GoogleAuthProvider();
+     const navigate = useNavigate();
 
 
 
@@ -18,7 +23,41 @@ const Register = () => {
         const email = e.target.email.value;
         const password = e.target.password.value;
         console.log({ name, photo, email, password });
+        createUser(email, password)
+            .then((userCredential) => {
+                // Signed up 
+                const user = userCredential.user;
+                updateUser({ displayName: name, photoURL: photo })
+                .then(() => {
+                  setUser({ ...user, displayName: name, photoURL: photo });
+                  navigate("/");
+                })
+                .catch((error) => {
+                  console.log(error);
+                  setUser(user);
+                });
 
+              
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                console.log(errorCode, errorMessage);
+              
+            });
+
+    }
+
+    const handleSignInWithGoogle = () => {
+        signInWithGoogle(provider)
+        .then((result) => {
+            const user = result.user;
+            navigate("/");
+            console.log(user);
+        })
+        .catch((error) => {
+            console.log(error);
+        })
     }
     return (
         <div className='flex justify-center items-center min-h-screen'>
@@ -56,7 +95,7 @@ const Register = () => {
 
                         <button type='submit' className="btn btn-neutral mt-4">Register</button>
                         <div className="divider">OR</div>
-                        <button type="button"  className="btn btn-outline btn-secondary">
+                        <button onClick={handleSignInWithGoogle} type="button"  className="btn btn-outline btn-secondary">
                             <FcGoogle size={20}></FcGoogle>
                             Continue with Google
                         </button>

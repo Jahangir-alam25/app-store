@@ -1,19 +1,30 @@
-import { useState } from "react";
+import { use, useState } from "react";
 import { Link, NavLink } from "react-router";
 import { Menu, X } from "lucide-react";
+import { AuthContext } from "../Provider/AuthProvider";
 
-// Dummy user (null = not logged in)
-const user = {
-  username: "john_doe",
-  avatar: "https://i.pravatar.cc/100?img=3", // Sample avatar
-};
+import userIcon from "../assets/user.png";
 
-const Navbar=()=> {
+const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const isLoggedIn = !!user; // simulate login
+ 
+  const { user, logOut } = use(AuthContext);
+
+
+
+  const handleLogOut = () => {
+    console.log("user trying to LogOut");
+    logOut()
+      .then(() => {
+        alert("You Logged Out successfully");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
   const navLinks = [
-    { name: "Apps", path: "/apps" },
+    { name: "Apps", path: "/" },
     { name: "My Profile", path: "/profile" },
   ];
 
@@ -21,7 +32,7 @@ const Navbar=()=> {
     "text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium";
 
   const activeClass =
-    "text-white bg-blue-600 px-3 py-2 rounded-md text-sm font-medium";
+    "underline text-blue-600 font-semibold";
 
   return (
     <nav className="bg-white border-b shadow-sm px-4 py-3">
@@ -44,28 +55,26 @@ const Navbar=()=> {
             </NavLink>
           ))}
 
-          {/* {user ? (
+          {user ? (
             <div className="flex items-center gap-3">
               <div className="relative group">
                 <img
-                  src={user.avatar}
+                  src={`${user.photoURL ? user.photoURL : userIcon}`}
                   alt="Profile"
                   className="w-8 h-8 rounded-full cursor-pointer"
                 />
-                <span className="absolute -top-8 left-1/2 -translate-x-1/2 bg-black text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">
-                  {user.username}
+                <span className="absolute top-8 left-1/2 -translate-x-1/2 bg-black text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">
+                  {user.displayName}
                 </span>
               </div>
-              <button className="text-sm text-red-500 hover:underline">Logout</button>
+              <button onClick={handleLogOut} className="text-sm btn px-10 bg-blue-600 text-white hover:underline">Logout</button>
             </div>
           ) : (
-            <Link to="/auth/login" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 text-sm">
+            <Link to="/auth/login" className="bg-blue-600 text-white px-10 py-2 rounded hover:bg-blue-700 text-sm">
               Login
             </Link>
-          )} */}
-           <Link to="/auth/login" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 text-sm">
-              Login
-            </Link>
+          )}
+         
         </div>
 
         {/* Mobile Menu Button */}
@@ -92,22 +101,27 @@ const Navbar=()=> {
             </NavLink>
           ))}
 
-          {isLoggedIn ? (
+          {user ? (
             <div className="flex items-center gap-3 px-3">
               <img
-                src={user.avatar}
+                src={`${user.photoURL ? user.photoURL : userIcon}`}
                 alt="Profile"
                 className="w-8 h-8 rounded-full"
               />
               <span className="text-sm">{user.username}</span>
-              <button className="text-red-500 text-sm hover:underline ml-auto">
+              <button onClick={handleLogOut} className="text-red-500 text-sm hover:underline ml-auto">
                 Logout
               </button>
             </div>
           ) : (
-            <button className="bg-blue-600 text-white w-full px-4 py-2 rounded text-sm">
-              Login
-            </button>
+            <Link to="/auth/login">
+              <div>
+                <button className="bg-blue-600 btn-block text-white  px-4 py-2 rounded text-sm">
+                  Login
+                </button>
+              </div>
+            </Link>
+
           )}
         </div>
       )}

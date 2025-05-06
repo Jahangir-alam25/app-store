@@ -5,6 +5,7 @@ import AuthLayout from "../Layout/AuthLayout";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import AppDetails from "../Pages/AppDetails";
+import PrivateRoute from "../Provider/PrivateRoute";
 
 
 const router = createBrowserRouter([
@@ -19,7 +20,11 @@ const router = createBrowserRouter([
         },
         {
           path: "/category/:id",
-         Component: AppDetails,
+          element: (
+            <PrivateRoute>
+              <AppDetails></AppDetails>
+            </PrivateRoute>
+          ),
           loader: () => fetch("/apps.json"),
         }
       ],
