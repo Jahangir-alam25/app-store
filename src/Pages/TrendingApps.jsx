@@ -14,11 +14,13 @@ const TrendingApps = ({ apps }) => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {trendingApps.map(app => (
           <Link to={`/category/${app.id}`} key={app.id} className="bg-white shadow-lg rounded-2xl overflow-hidden transition hover:shadow-xl">
-            <img
-              src={app.thumbnail}
-              alt={app.name}
-              className="w-full h-40 object-cover"
-            />
+            <div className='bg-white p-5 rounded-2xl'>
+              <img
+                src={app.thumbnail}
+                alt={app.name}
+                className="w-full rounded-t-md h-40 object-cover"
+              />
+              </div>
             <div className="p-4">
               <h3 className="text-lg font-semibold mb-1">{app.name}</h3>
               <p className="text-sm text-gray-500 mb-1">⭐ Rating: {app.rating}</p>

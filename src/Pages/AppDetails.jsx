@@ -24,7 +24,9 @@ const AppDetails = () => {
 
 
   const handleInstall = () => {
-    setHasInstalled(true);
+    setHasInstalled(!hasInstalled);
+    
+    
   };
 
   const handleCommentSubmit = (e) => {
@@ -70,16 +72,12 @@ console.log(newReview.photo);
             <p><strong>Rating:</strong> ⭐ {app.rating}</p>
             <p className="my-4">{app.description}</p>
 
-            {!hasInstalled ? (
-              <button
+            <button
                 onClick={handleInstall}
                 className="px-10 py-2 mb-6 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
               >
-                Install
+                {hasInstalled ? "Uninstall" : "Install"}
               </button>
-            ) : (
-              <button className="px-10 py-2 mb-6 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"> Uninstall</button>
-            )}
           </div>
         </div>
 
