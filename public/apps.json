@@ -1,147 +1,206 @@
 [
-    {
-      "id": "app001",
-      "name": "Programming Hero",
-      "developer": "Programming Hero Ltd.",
-      "thumbnail": "https://i.ibb.co/sWbb4Z5/programming-hero-thumb.jpg",
-      "banner": "https://i.ibb.co/vj5rT68/programming-hero-banner.jpg",
-      "downloads": 3500000,
-      "category": "Education",
-      "rating": 5.0,
-      "description": "An interactive app that teaches programming in a gamified and beginner-friendly way.",
-      "features": ["Interactive coding lessons", "Real-world projects", "Gamified learning"]
-    },
-    {
-      "id": "app006",
-      "name": "LearnX",
-      "developer": "EduSoft",
-      "thumbnail": "https://i.ibb.co/Lk5dxnd/learnx-thumb.jpg",
-      "banner": "https://i.ibb.co/Jjy1F6R/learnx-banner.jpg",
-      "downloads": 2750000,
-      "category": "Education",
-      "rating": 4.5,
-      "description": "A complete learning platform covering math, science, and language for all grades.",
-      "features": ["Video lessons", "Practice quizzes", "Progress tracking"]
-    },
-    {
-      "id": "app009",
-      "name": "EduMate",
-      "developer": "SmartEd Inc.",
-      "thumbnail": "https://i.ibb.co/YX9qDNc/edumate-thumb.jpg",
-      "banner": "https://i.ibb.co/3Y7jmS1/edumate-banner.jpg",
-      "downloads": 2100000,
-      "category": "Education",
-      "rating": 4.6,
-      "description": "Your personalized education companion with courses from top educators worldwide.",
-      "features": ["Live classes", "Downloadable materials", "Certificates"]
-    },
-    {
-      "id": "app010",
-      "name": "SkillBuilder",
-      "developer": "BuildSkills Co.",
-      "thumbnail": "https://i.ibb.co/2qRQ3s6/skillbuilder-thumb.jpg",
-      "banner": "https://i.ibb.co/jWvjN6M/skillbuilder-banner.jpg",
-      "downloads": 1200000,
-      "category": "Education",
-      "rating": 4.4,
-      "description": "Improve your career skills with industry-level lessons and certifications.",
-      "features": ["Career guidance", "Skill testing", "Video lessons"]
-    },
-    {
-      "id": "app003",
-      "name": "NotionFlow",
-      "developer": "Notion Tools Inc.",
-      "thumbnail": "https://i.ibb.co/X7VNHG7/notion-thumb.jpg",
-      "banner": "https://i.ibb.co/PNzhbP1/notion-banner.jpg",
-      "downloads": 1500000,
-      "category": "Productivity",
-      "rating": 4.9,
-      "description": "Organize notes, tasks, and wikis in one place with powerful workspace tools.",
-      "features": ["Kanban boards", "Collaborative notes", "Calendar sync"]
-    },
-    {
-      "id": "app004",
-      "name": "Grok AI Assistant",
-      "developer": "Grok AI Co.",
-      "thumbnail": "https://i.ibb.co.com/nN825FZx/Screenshot-20250505-145639.png",
-      "banner": "https://i.ibb.co/mhmj0DP/grok-banner.jpg",
-      "downloads": 1800000,
-      "category": "Productivity",
-      "rating": 4.6,
-      "description": "Smart assistant that automates tasks, answers queries, and boosts efficiency.",
-      "features": ["Real-time Q&A", "Automation tools", "AI-powered insights"]
-    },
-    {
-      "id": "app007",
-      "name": "Zen Task",
-      "developer": "Zen Productivity",
-      "thumbnail": "https://i.ibb.co/qRDxpgT/zentask-thumb.jpg",
-      "banner": "https://i.ibb.co/whS3HMb/zentask-banner.jpg",
-      "downloads": 850000,
-      "category": "Productivity",
-      "rating": 4.3,
-      "description": "Simple yet powerful task manager to organize your daily work and projects.",
-      "features": ["To-do lists", "Reminders", "Progress tracking"]
-    },
-    {
-      "id": "app011",
-      "name": "WorkZen",
-      "developer": "WorkZen Inc.",
-      "thumbnail": "https://i.ibb.co/8Pqnmxm/workzen-thumb.jpg",
-      "banner": "https://i.ibb.co/bXR3wP9/workzen-banner.jpg",
-      "downloads": 950000,
-      "category": "Productivity",
-      "rating": 4.2,
-      "description": "Boost your productivity with focused timers, habit tracking, and task batching.",
-      "features": ["Pomodoro timer", "Habit streaks", "Focus mode"]
-    },
-    {
-      "id": "app002",
-      "name": "Fitify Fitness",
-      "developer": "Fitify Ltd.",
-      "thumbnail": "https://i.ibb.co.com/j9tT6NN5/Screenshot-20250505-144326.png ",
-      "banner": "https://i.ibb.co/n1fGh5n/fitify-banner.jpg",
-      "downloads": 2200000,
-      "category": "Health",
-      "rating": 4.7,
-      "description": "Personalized workout plans to help you stay fit at home or at the gym.",
-      "features": ["Bodyweight workouts", "Custom plans", "Track progress"]
-    },
-    {
-      "id": "app005",
-      "name": "HealthyMind",
-      "developer": "MindWorks",
-      "thumbnail": "https://i.ibb.co/mB7jWr4/healthymind-thumb.jpg",
-      "banner": "https://i.ibb.co/kM4yTJy/healthymind-banner.jpg",
-      "downloads": 1000000,
-      "category": "Health",
-      "rating": 4.4,
-      "description": "Boost mental health with guided meditations, sleep sounds, and breathing exercises.",
-      "features": ["Meditation", "Sleep sounds", "Daily mood check-in"]
-    },
-    {
-      "id": "app008",
-      "name": "FitTrack Pro",
-      "developer": "Wellness Lab",
-      "thumbnail": "https://i.ibb.co/YDY3HJr/fittrack-thumb.jpg",
-      "banner": "https://i.ibb.co/z54pZGH/fittrack-banner.jpg",
-      "downloads": 950000,
-      "category": "Health",
-      "rating": 4.9,
-      "description": "Advanced fitness tracker that monitors activity, heart rate, and calories with precision.",
-      "features": ["Step counter", "Heart rate monitor", "Health goals"]
-    },
-    {
-      "id": "app012",
-      "name": "NutriGuide",
-      "developer": "HealthTools Co.",
-      "thumbnail": "https://i.ibb.co/NpK5sQQ/nutriguide-thumb.jpg",
-      "banner": "https://i.ibb.co/ZT43DPJ/nutriguide-banner.jpg",
-      "downloads": 770000,
-      "category": "Health",
-      "rating": 4.5,
-      "description": "Your daily nutrition planner with meal suggestions and macro tracking.",
-      "features": ["Meal planner", "Calorie calculator", "Healthy recipes"]
-    }
-  ]
-  
+  {
+    "id": "app001",
+    "name": "Programming Hero",
+    "developer": "Programming Hero Ltd.",
+    "thumbnail": "https://i.ibb.co.com/Rp61NhfZ/Screenshot-20250506-175009.png",
+    "banner": "https://i.ibb.co.com/5xxJQDwJ/IMG-20250507-WA0001.jpg",
+    "bannerText": "Learn coding interactively with real-world projects",
+    "downloads": 3500000,
+    "category": "Education",
+    "rating": 5.0,
+    "description": "An interactive app that teaches programming in a gamified and beginner-friendly way.",
+    "features": [
+      "Interactive coding lessons",
+      "Real-world projects",
+      "Gamified learning"
+    ]
+  },
+  {
+    "id": "app006",
+    "name": "LearnX",
+    "developer": "EduSoft",
+    "thumbnail": "https://i.ibb.co.com/0dZNTt4/Screenshot-20250506-175427.png",
+    "banner": "https://i.ibb.co.com/TxjrsT6v/IMG-20250507-WA0006.jpg",
+    "bannerText": "Master skills quickly with interactive learning tools",
+    "downloads": 2750000,
+    "category": "Education",
+    "rating": 4.5,
+    "description": "A complete learning platform covering math, science, and language for all grades.",
+    "features": [
+      "Video lessons",
+      "Practice quizzes",
+      "Progress tracking"
+    ]
+  },
+  {
+    "id": "app009",
+    "name": "EduNext",
+    "developer": "SmartEd Inc.",
+    "thumbnail": "https://i.ibb.co.com/KS0FXC4/Screenshot-20250506-175649.png",
+    "banner": "https://i.ibb.co.com/60rQ9RYk/IMG-20250507-WA0005.jpg",
+    "bannerText": "Next-generation learning platform for every student",
+    "downloads": 2100000,
+    "category": "Education",
+    "rating": 4.6,
+    "description": "Your personalized education companion with courses from top educators worldwide.",
+    "features": [
+      "Live classes",
+      "Downloadable materials",
+      "Certificates"
+    ]
+  },
+  {
+    "id": "app010",
+    "name": "SkillTree",
+    "developer": "BuildSkills Co.",
+    "thumbnail": "https://i.ibb.co.com/Lfnd9HK/Screenshot-20250506-175822.png",
+    "banner": "https://i.ibb.co.com/gLQPWW6L/IMG-20250507-WA0007.jpg",
+    "bannerText": "Grow your career with practical skill learning",
+    "downloads": 1200000,
+    "category": "Education",
+    "rating": 4.4,
+    "description": "Improve your career skills with industry-level lessons and certifications.",
+    "features": [
+      "Career guidance",
+      "Skill testing",
+      "Video lessons"
+    ]
+  },
+  {
+    "id": "app003",
+    "name": "NotionFlow",
+    "developer": "Notion Tools Inc.",
+    "thumbnail": "https://i.ibb.co.com/V5PdC81/Screenshot-20250506-174550.png",
+    "banner": "https://i.ibb.co.com/0pXhkcqj/IMG-20250507-WA0008.jpg",
+    "bannerText": "Organize ideas and tasks in one place",
+    "downloads": 1500000,
+    "category": "Productivity",
+    "rating": 4.9,
+    "description": "Organize notes, tasks, and wikis in one place with powerful workspace tools.",
+    "features": [
+      "Kanban boards",
+      "Collaborative notes",
+      "Calendar sync"
+    ]
+  },
+  {
+    "id": "app004",
+    "name": "Grok AI Assistant",
+    "developer": "Grok AI Co.",
+    "thumbnail": "https://i.ibb.co.com/nN825FZx/Screenshot-20250505-145639.png",
+    "banner": "https://i.ibb.co.com/SDsSj33Q/IMG-20250507-WA0009.jpg",
+    "bannerText": "Grok understands questions and generates smart answers",
+    "downloads": 1800000,
+    "category": "Productivity",
+    "rating": 4.6,
+    "description": "Smart assistant that automates tasks, answers queries, and boosts efficiency.",
+    "features": [
+      "Real-time Q&A",
+      "Automation tools",
+      "AI-powered insights"
+    ]
+  },
+  {
+    "id": "app007",
+    "name": "Zen Task",
+    "developer": "Zen Productivity",
+    "thumbnail": "https://i.ibb.co.com/kgG6jxjr/Screenshot-20250506-174328.png",
+    "banner": " https://i.ibb.co.com/Hp7mrj4X/images.jpg",
+    "bannerText": "Zin Task app helps manage and complete tasks.",
+    "downloads": 850000,
+    "category": "Productivity",
+    "rating": 4.3,
+    "description": "Simple yet powerful task manager to organize your daily work and projects.",
+    "features": [
+      "To-do lists",
+      "Reminders",
+      "Progress tracking"
+    ]
+  },
+  {
+    "id": "app011",
+    "name": "WorkZen",
+    "developer": "WorkZen Inc.",
+    "thumbnail": "https://i.ibb.co.com/JJTDwdY/Screenshot-20250506-174314.png",
+    "banner": "https://i.ibb.co.com/5hZw5BdS/IMG-20250507-WA0010.jpg",
+    "bannerText": "Achieve work-life balance with smart planning",
+    "downloads": 950000,
+    "category": "Productivity",
+    "rating": 4.2,
+    "description": "Boost your productivity with focused timers, habit tracking, and task batching.",
+    "features": [
+      "Pomodoro timer",
+      "Habit streaks",
+      "Focus mode"
+    ]
+  },
+  {
+    "id": "app002",
+    "name": "Fitify Fitness",
+    "developer": "Fitify Ltd.",
+    "thumbnail": "https://i.ibb.co.com/j9tT6NN5/Screenshot-20250505-144326.png ",
+    "banner": "https://i.ibb.co.com/NgcvZqQW/medical1.webp",
+    "bannerText": "Get fit anytime with personalized workout plans",
+    "downloads": 2200000,
+    "category": "Health",
+    "rating": 4.7,
+    "description": "Personalized workout plans to help you stay fit at home or at the gym.",
+    "features": [
+      "Bodyweight workouts",
+      "Custom plans",
+      "Track progress"
+    ]
+  },
+  {
+    "id": "app005",
+    "name": "HealthyMind",
+    "developer": "MindWorks",
+    "thumbnail": "https://i.ibb.co.com/ccBMc4tn/Screenshot-20250506-173437.png",
+    "banner": "https://i.ibb.co.com/V0QXbyLR/Whats-App-Image-2025-05-07-at-12-08-12-52dce3da.jpg",
+    "bannerText": "Boost mental wellness with guided daily practices",
+    "downloads": 1000000,
+    "category": "Health",
+    "rating": 4.4,
+    "description": "Boost mental health with guided meditations, sleep sounds, and breathing exercises.",
+    "features": [
+      "Meditation",
+      "Sleep sounds",
+      "Daily mood check-in"
+    ]
+  },
+  {
+    "id": "app008",
+    "name": "FitTrack Pro",
+    "developer": "Wellness Lab",
+    "thumbnail": "https://i.ibb.co.com/Y41Ss3Qp/Screenshot-20250506-173638.png",
+    "banner": "https://i.ibb.co.com/kgvQ6JBD/Whats-App-Image-2025-05-07-at-12-08-14-ac40de7a.jpg",
+    "bannerText": "Track fitness goals with real-time health insights",
+    "downloads": 950000,
+    "category": "Health",
+    "rating": 4.9,
+    "description": "Advanced fitness tracker that monitors activity, heart rate, and calories with precision.",
+    "features": [
+      "Step counter",
+      "Heart rate monitor",
+      "Health goals"
+    ]
+  },
+  {
+    "id": "app012",
+    "name": "NutriGuide",
+    "developer": "HealthTools Co.",
+    "thumbnail": "https://i.ibb.co.com/B5St2940/Screenshot-20250506-173037.png",
+    "banner": "https://i.ibb.co.com/R4CMmPs0/Whats-App-Image-2025-05-07-at-12-08-12-1f97720c.jpg",
+    "bannerText": "Eat smarter with personalized nutrition guidance daily",
+    "downloads": 770000,
+    "category": "Health",
+    "rating": 4.5,
+    "description": "Your daily nutrition planner with meal suggestions and macro tracking.",
+    "features": [
+      "Meal planner",
+      "Calorie calculator",
+      "Healthy recipes"
+    ]
+  }
+]

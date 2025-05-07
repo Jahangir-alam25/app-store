@@ -35,7 +35,7 @@ const Navbar = () => {
     "underline text-blue-600 font-semibold";
 
   return (
-    <nav className="bg-white border-b shadow-sm px-4 py-3">
+    <nav className="bg-white border-b  px-4 py-3">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center gap-2 text-blue-600 font-bold text-xl">

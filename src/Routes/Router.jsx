@@ -6,6 +6,7 @@ import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import AppDetails from "../Pages/AppDetails";
 import PrivateRoute from "../Provider/PrivateRoute";
+import ErrorPage from "../Components/ErrorPage";
 
 
 const router = createBrowserRouter([
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
           }
       ]
   },
+  {
+    path: "/*",
+    element: <ErrorPage></ErrorPage>,
+  }
   ]);
 
 
