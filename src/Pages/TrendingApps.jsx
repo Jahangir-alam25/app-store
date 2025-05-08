@@ -10,7 +10,10 @@ const TrendingApps = ({ apps }) => {
 
   return (
     <section className="my-10">
-      <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">🔥 Trending Apps</h2>
+      <h2 className="text-2xl md:text-3xl font-bold  text-center">🔥 Trending Apps</h2>
+      <p className="text-gray-600 mt-3 mb-12 text-center">
+        Discover what's hot right now! These top-rated apps are climbing the charts based on user engagement, downloads, and reviews.
+      </p>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {trendingApps.map(app => (
           <Link to={`/category/${app.id}`} key={app.id} className="bg-white shadow-lg rounded-2xl overflow-hidden transition hover:shadow-xl">
@@ -20,7 +23,7 @@ const TrendingApps = ({ apps }) => {
                 alt={app.name}
                 className="w-full rounded-t-md h-40 object-cover"
               />
-              </div>
+            </div>
             <div className="p-4">
               <h3 className="text-lg font-semibold mb-1">{app.name}</h3>
               <p className="text-sm text-gray-500 mb-1">⭐ Rating: {app.rating}</p>

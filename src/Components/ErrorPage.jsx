@@ -2,6 +2,7 @@ import React from 'react'
 
 import { Link, useRouteError } from 'react-router'
 import Navbar from './Navbar'
+import { Helmet } from 'react-helmet-async'
 
 
 
@@ -10,7 +11,9 @@ const ErrorPage = () => {
   console.log(error?.error?.message)
   return (
     <>
- 
+  <Helmet>
+         <title>404 Not Found - AppStore</title>
+       </Helmet>
       <div className='py-24 text-center'>
         <h1 className='mb-8 text-7xl font-bold text-red-500'>
           {error?.status || 404}

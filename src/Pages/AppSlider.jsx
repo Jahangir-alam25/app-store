@@ -44,7 +44,7 @@ const AppSlider = () => {
 
   return (
     <div className="w-full max-w-4xl mx-auto my-6">
-      <div className="flex flex-col sm:flex-row justify-center items-center mb-10 ">
+      <div className="flex  sm:flex-row justify-center items-center mb-10 ">
         <input
           className="bg-white w-full lg:w-5/12 sm:w-80 px-4 py-2 rounded-l-2xl border border-gray-300 shadow-sm"
           type="text"
@@ -56,7 +56,7 @@ const AppSlider = () => {
       </div>
 
       <div className="text-center mb-6">
-        <h2 className="text-3xl font-bold text-gray-800">Discover New & Trending Apps</h2>
+        <h2 className="text-3xl font-bold text-gray-800">Latest Arrivals on the AppStore</h2>
         <p className="text-gray-600 mt-2">
           Explore our latest releases and top promotions. Stay ahead with cutting-edge apps curated just for you.
         </p>

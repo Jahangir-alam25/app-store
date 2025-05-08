@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
-import { getAuth, updateProfile } from "firebase/auth";
+import { updateProfile } from "firebase/auth";
+import auth from "../firebase/firebase.config";
+import { Helmet } from "react-helmet-async";
 
 
 const MyProfile = () => {
-  const auth = getAuth();
+
   const user = auth.currentUser;
 
   const [name, setName] = useState("");
@@ -38,7 +40,9 @@ const MyProfile = () => {
 
   return (
     <div className="max-w-md mx-auto p-4 shadow-lg rounded-lg bg-white space-y-4 my-10">
-     
+      <Helmet>
+        <title>My Profile - AppStore</title>
+      </Helmet>
       <h2 className="text-2xl font-bold text-center">My Profile</h2>
 
       <div className="text-center">

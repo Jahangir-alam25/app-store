@@ -4,10 +4,11 @@ import { Menu, X } from "lucide-react";
 import { AuthContext } from "../Provider/AuthProvider";
 
 import userIcon from "../assets/user.png";
+import Swal from "sweetalert2";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
- 
+
   const { user, logOut } = use(AuthContext);
 
 
@@ -16,7 +17,11 @@ const Navbar = () => {
     console.log("user trying to LogOut");
     logOut()
       .then(() => {
-        alert("You Logged Out successfully");
+        Swal.fire({
+          title: "Logout Successfully",
+          text: "You clicked the button!",
+          icon: "success"
+        })
       })
       .catch((error) => {
         console.log(error);
@@ -25,7 +30,13 @@ const Navbar = () => {
 
   const navLinks = [
     { name: "Apps", path: "/" },
+    {
+      name: "Blogs",
+      path: "/blogs",
+
+    },
     { name: "My Profile", path: "/profile" },
+
   ];
 
   const linkClass =
@@ -74,7 +85,7 @@ const Navbar = () => {
               Login
             </Link>
           )}
-         
+
         </div>
 
         {/* Mobile Menu Button */}

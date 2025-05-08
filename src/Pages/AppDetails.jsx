@@ -5,6 +5,7 @@ import { useLoaderData } from 'react-router';
 import { use } from 'react';
 import { AuthContext } from '../Provider/AuthProvider';
 import userIcon from "../assets/user.png";
+import { Helmet } from 'react-helmet-async';
 
 
 
@@ -16,6 +17,7 @@ const AppDetails = () => {
   const [comment, setComment] = useState("");
   const [comments, setComments] = useState([]);
   const [hasInstalled, setHasInstalled] = useState(false);
+  const [isInstalled, setIsInstalled] = useState(false);
   const { user } = use(AuthContext)
 
 
@@ -24,7 +26,12 @@ const AppDetails = () => {
 
 
   const handleInstall = () => {
-    setHasInstalled(!hasInstalled);
+    const newStatus = !isInstalled;
+    setIsInstalled(newStatus);
+    if (newStatus) {
+      setHasInstalled(true);
+
+    }
     
     
   };
@@ -54,6 +61,9 @@ console.log(newReview.photo);
 
   return (
     <div className="py-4 md:py-10">
+        <Helmet>
+        <title>App Details - AppStore</title>
+      </Helmet>
       <div className='bg-white p-5 rounded-2xl'>
         <div className='relative '>
         <img src={app.banner} alt={app.name} className="w-full h-52 sm:h-80 rounded-xl mb-6" />
@@ -76,7 +86,7 @@ console.log(newReview.photo);
                 onClick={handleInstall}
                 className="px-10 py-2 mb-6 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
               >
-                {hasInstalled ? "Uninstall" : "Install"}
+                {isInstalled ? "Uninstall" : "Install"}
               </button>
           </div>
         </div>
