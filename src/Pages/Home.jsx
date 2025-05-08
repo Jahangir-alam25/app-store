@@ -5,6 +5,7 @@ import { useLoaderData } from 'react-router';
 import Categories from './Categories';
 import AppServices from './AppServices';
 import { Helmet } from 'react-helmet-async';
+import AppReviews from './AppReviews';
 
 const Home = () => {
   const apps = useLoaderData()
@@ -16,6 +17,7 @@ const Home = () => {
       <AppSlider></AppSlider>
       <TrendingApps apps={apps}></TrendingApps>
       <Categories apps={apps}></Categories>
+      <AppReviews></AppReviews>
       <AppServices></AppServices>
     </div>
   );
