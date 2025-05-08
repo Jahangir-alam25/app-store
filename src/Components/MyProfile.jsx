@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { updateProfile } from "firebase/auth";
 import auth from "../firebase/firebase.config";
 import { Helmet } from "react-helmet-async";
+import { toast } from "react-toastify";
 
 
 const MyProfile = () => {
@@ -10,8 +11,7 @@ const MyProfile = () => {
 
   const [name, setName] = useState("");
   const [photoURL, setPhotoURL] = useState("");
-  const [successMsg, setSuccessMsg] = useState("");
-  const [errorMsg, setErrorMsg] = useState("");
+
 
   useEffect(() => {
     if (user) {
@@ -22,17 +22,16 @@ const MyProfile = () => {
 
   const handleUpdate = async (e) => {
     e.preventDefault();
-    setSuccessMsg("");
-    setErrorMsg("");
+  
 
     try {
       await updateProfile(user, {
         displayName: name,
         photoURL: photoURL,
       });
-      setSuccessMsg("Profile updated successfully.");
+      toast.success("Profile updated successfully.");
     } catch (error) {
-      setErrorMsg(error.message);
+      toast.error(error.message);
     }
   };
 
@@ -86,8 +85,7 @@ const MyProfile = () => {
         </button>
       </form>
 
-      {successMsg && <p className="text-green-600 text-center">{successMsg}</p>}
-      {errorMsg && <p className="text-red-600 text-center">{errorMsg}</p>}
+
     </div>
   );
 };

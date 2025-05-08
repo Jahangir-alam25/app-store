@@ -99,9 +99,9 @@ const Register = () => {
                                 name="password"
                                 required
                                 placeholder="Password"
-                                minLength="8"
-                                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-                                title="Must be more than 8 characters, including number, lowercase letter, uppercase letter"
+                                minLength="6"
+                                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"
+                                title="Must be more than 6 characters, including number, lowercase letter, uppercase letter"
                             />
                             <div
                                 className="absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer text-gray-500"
