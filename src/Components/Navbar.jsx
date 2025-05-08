@@ -120,7 +120,7 @@ const Navbar = () => {
                 className="w-8 h-8 rounded-full"
               />
               <span className="text-sm">{user.username}</span>
-              <button onClick={handleLogOut} className="text-red-500 text-sm hover:underline ml-auto">
+              <button onClick={handleLogOut} className="btn px-10 bg-blue-600 text-white hover:underline ml-auto">
                 Logout
               </button>
             </div>
