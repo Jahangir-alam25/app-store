@@ -6,6 +6,9 @@ A modern and interactive AppStore platform that allows users to discover, explor
 
 [https://a9-app-store-ph.netlify.app/](https://a9-app-store-ph.netlify.app/)
 
+<!-- Project Photo -->
+<img src="https://i.ibb.co/998NmyC3/app-store.png" alt="Cover" width="100%" />
+
 ## 🎯 Purpose
 
 The purpose of AppStore is to provide users with an intuitive platform to:
@@ -40,6 +43,20 @@ The purpose of AppStore is to provide users with an intuitive platform to:
 - **Firebase** – For real-time database, authentication, and hosting
 
 
+
+##### 📦 Installation & Setup
+
+ **Clone the Repository:**
+
+   ```bash
+   git clone https://github.com/your-username/app-store.git
+   ```
+ **Run the Command:**
+
+   ```bash
+   npm install
+
+   ```
 ---
 
 Feel free to contribute or fork the repository. Happy coding! 🚀
