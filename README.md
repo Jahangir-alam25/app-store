@@ -44,12 +44,12 @@ The purpose of AppStore is to provide users with an intuitive platform to:
 
 
 
-##### 📦 Installation & Setup
+### **Installation & Setup**
 
  **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/your-username/app-store.git
+   git clone https://github.com/Jahangir-alam25/app-store.git
    ```
  **Run the Command:**
 
